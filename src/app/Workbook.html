@@ -1,0 +1,49 @@
+﻿<div class="container-fluid">
+    <section class="container">
+        <div class="container-page">
+            <div class="col-xs-12 col-md-12">
+                <div class="col-lg-5" style="padding-left: 0px !important;">
+                    <label class="BannerTitle">Testing</label>
+                </div>
+                <div class="col-lg-1">
+                   
+                </div>
+                <div class="col-lg-4">
+                    <table>
+                        <tr style="vertical-align: top;">
+                            <td>
+                            </td>
+                            <td>
+                                <div class="WorkbookSheetList">
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="applicationMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            {{ selected.name }}<span class="caret"></span>
+                                        </button>
+                                        <ul class="WorkbookSheetDropDownList dropdown-menu" aria-labelledby="applicationMenu">
+                                            <li *ngFor="let app of workbookSheetsList">
+                                                <a (click)=onChange(app)>{{ app.name }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="padding-left: 15px !important;">
+                                Selected Report:
+                            </td>
+                            <td> {{ReportID}}</td>
+                        </tr>
+                    </table>
+                </div>
+            
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <div id="outerDiv" [style.width]="customizeWidth">
+                  <Pivot-Grid [ReportID]="ReportID"></Pivot-Grid>
+                    <!--<InfraPivotGrid [ReportID]="ReportID"></InfraPivotGrid>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

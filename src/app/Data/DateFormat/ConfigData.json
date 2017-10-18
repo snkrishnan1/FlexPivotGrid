@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "uniqueName": "Brand"
+    },
+    {
+      "uniqueName": "Retailer_Name"
+    }
+  ],
+  "columns": [
+    {
+      "uniqueName": "CAL_Wk_End_Dt"
+    },
+    {
+      "uniqueName": "[Measures]"
+    }
+  ],
+  "measures": [
+    {
+      "uniqueName": "Sold_Dollars",
+      "aggregation": "sum",
+      "caption": "Sold Dollars"
+    },
+    {
+      "uniqueName": "Sell_Price",
+      "aggregation": "sum",
+      "caption": "Sell Price"
+    },
+    {
+      "uniqueName": "Sold_Units",
+      "aggregation": "sum",
+      "caption": "Sold Units"
+    }
+  ]
+}

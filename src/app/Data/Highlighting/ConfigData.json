@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "uniqueName": "Brand"
+    },
+    {
+      "uniqueName": "Rtlr_Name"
+    },
+    {
+      "uniqueName": "FIRST_DAY_OF_MONTH"
+    }
+  ],
+  "columns": [
+    {
+      "uniqueName": "[Measures]"
+    }
+  ],
+  "measures": [
+    {
+      "uniqueName": "Sold_Dollars",
+      "aggregation": "sum"
+    },
+    {
+      "uniqueName": "Rtlr_Cost",
+      "aggregation": "sum"
+    },
+    {
+      "uniqueName": "Rtlr_Price",
+      "aggregation": "sum"
+    },
+    {
+      "uniqueName": "Sold_Units",
+      "aggregation": "sum"
+    }
+  ],
+  "conditions": [
+    {
+      "formula": "#value > 50000",
+      "measure": "Sold_Dollars",
+      "format": {
+        "backgroundColor": "#00A45A",
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "formula": "AND(#value > 1000, #value < 3000)",
+      "measure": "Rtlr_Price",
+      "format": {
+        "backgroundColor": "#df3800",
+        "color": "#FFFFFF"
+      }
+    }
+  ]
+}
